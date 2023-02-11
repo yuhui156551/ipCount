@@ -1,7 +1,9 @@
 package cn.yuhui.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
+@Component("ipProperties")
 @ConfigurationProperties(prefix = "tools.ip")
 public class IpProperties {
     /**

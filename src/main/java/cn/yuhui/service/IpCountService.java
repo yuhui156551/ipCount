@@ -43,7 +43,7 @@ public class IpCountService {
         System.out.println("+--------------------+-------+");
     }*/
 
-    @Scheduled(cron = "0/5 * * * * ?")
+    @Scheduled(cron = "0/#{ipProperties.cycle} * * * * ?")
     public void print(){
         // 详细模式
         if(ipProperties.getModel().equals(IpProperties.LogModel.DETAIL.getValue())){
